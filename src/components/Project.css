@@ -1,0 +1,93 @@
+.project-section {
+  background: radial-gradient(ellipse at center, #000814 0%, #000000 100%);
+  padding: 6rem 2rem;
+  color: #00f7ff;
+  min-height: 100vh;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(90deg, #00f0ff, #3a7bd5, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow:
+    0 0 5px #00f7ff88,
+    0 0 10px #00f7ff55,
+    0 0 20px #00f7ff22;
+}
+
+.project-card {
+  width: 330px;
+  background: rgba(9, 48, 48, 0.454);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 247, 255, 0.2);
+}
+
+.project-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.neon-project-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #00eaff;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.skill-badge {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #00f7ff;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #00f7ff33;
+}
+
+.project-buttons .btn {
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00f7ff;
+  border: 1px solid #00f7ff66;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.project-buttons .btn:hover {
+  background: #00f7ff22;
+  box-shadow: 0 0 15px #00f7ffaa;
+  color: #fff;
+}
+.icon-skill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0 0 8px #00f7ff22;
+  transition: transform 0.3s ease;
+}
+
+.icon-skill:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #00f7ffaa;
+}
