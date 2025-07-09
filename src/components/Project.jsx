@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Card, Button, Badge } from 'react-bootstrap';
 import './Project.css';
 import Weather from '../assets/weather.jpg';
+import todo from'../assets/todo.jpg';
+import ecom from '../assets/ecom.jpg';
 import { FaReact, FaBootstrap, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiJavascript, SiRedux, SiHtml5, SiCss3, SiTypescript } from 'react-icons/si';
 import { SiPython } from 'react-icons/si';
@@ -17,13 +19,44 @@ const projects = [
   },
   {
     title: "Todo Manager",
-    image: "/images/todo.png",
+    image: todo,
     description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
     skills: ["React", "Bootstrap"],
     codeLink: "https://github.com/anjali2128/To-do-list",
-    liveLink: "https://todo-manager.netlify.app",
+    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
   },
-  // Add more projects here
+  {
+    title: "E-Commerce",
+    image: ecom,
+    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
+    skills: ["React", "Bootstrap"],
+    codeLink: "https://github.com/anjali2128/To-do-list",
+    liveLink: "https://mellow-douhua-cd4a93.netlify.app/",
+  },
+  {
+    title: "E-Commerce",
+    image: ecom,
+    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
+    skills: ["React", "Bootstrap"],
+    codeLink: "https://github.com/anjali2128/To-do-list",
+    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
+  },
+  {
+    title: "E-Commerce",
+    image: ecom,
+    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
+    skills: ["React", "Bootstrap"],
+    codeLink: "https://github.com/anjali2128/To-do-list",
+    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
+  },
+  {
+    title: "E-Commerce",
+    image: ecom,
+    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
+    skills: ["React", "Bootstrap"],
+    codeLink: "https://github.com/anjali2128/To-do-list",
+    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
+  },
 ];
 const skillIcons = {
   React: <FaReact title="React" color="#61DBFB" size={22} />,
