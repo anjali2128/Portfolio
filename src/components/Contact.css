@@ -1,27 +1,27 @@
 .contact-section {
   padding: 4rem 2rem;
-  background: linear-gradient(145deg, #000814, #000000);
-  color: #00f7ff;
+  background: radial-gradient(circle at top left, #000814, #010203, #000000);
+  color: #00fff7;
   min-height: 100vh;
   position: relative;
+  font-family: 'Orbitron', sans-serif;
   z-index: 2;
+  overflow: hidden;
 }
 
 .contact-heading {
   font-size: 3rem;
   text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  color: #00ffe7;
-  text-shadow: 0 0 10px #00ffd5, 0 0 30px #0ff;
-  letter-spacing: 3px;
-  margin-bottom: 3rem;
-  animation: typing 3s steps(20, end), blink 0.75s step-end infinite;
+  background: linear-gradient(90deg, #00fff7, #0ff 50%, #00ffe1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: typing 2.5s steps(12, end), blink 0.8s step-end infinite;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #00ffe7;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 3rem;
+  letter-spacing: 3px;
 }
 
 @keyframes typing {
@@ -34,55 +34,160 @@
 }
 
 .contact-form-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 2.5rem;
   background: rgba(0, 255, 255, 0.03);
-  padding: 2rem;
+  border: 2px solid #00ffe055;
   border-radius: 20px;
-  border: 1px solid #00ffc222;
-  box-shadow: 0 0 40px #00ffd522;
+  box-shadow:
+    0 0 15px #00ffe033,
+    inset 0 0 30px #00ffe022;
+  backdrop-filter: blur(10px);
+  animation: panelGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes panelGlow {
+  from {
+    box-shadow: 0 0 20px #00fff022, inset 0 0 30px #00ffd533;
+  }
+  to {
+    box-shadow: 0 0 50px #00ffe055, inset 0 0 60px #00ffe022;
+  }
 }
 
 .contact-form .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 0.9rem 1.2rem;
-  background: transparent;
-  border: 1px solid #00ffff55;
-  color: #e4f9ff;
-  border-radius: 12px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid #00ffee33;
+  border-left: 4px solid #00ffee;
+  border-radius: 10px;
+  color: #e0ffff;
+  font-family: 'Rajdhani', monospace;
+  font-size: 1.05rem;
+  box-shadow: 0 0 10px #00ffe022;
   outline: none;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00ffee;
+  box-shadow:
+    0 0 25px #00ffee88,
+    0 0 15px #00ffee33 inset;
+  background: rgba(0, 255, 255, 0.08);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.neon-button {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  color: #00ffe7;
+  border: 2px solid #00fff088;
+  border-radius: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 0 20px #00ffe022;
+}
+
+.neon-button:hover {
+  background: #00ffe7;
+  color: #000;
+  box-shadow:
+    0 0 30px #00fff088,
+    0 0 50px #00ffd5aa;
+  transform: scale(1.03);
+}
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+/* sliding neon bar on hover */
+.contact-form .form-group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+
+.contact-form .form-group:hover::before {
+  left: 100%;
+}
+
+.contact-form .form-group:hover {
+  box-shadow:
+    0 0 20px #00fff088,
+    0 0 40px #00ffd522;
+  transform: scale(1.02);
+}
+
+/* input and textarea */
+.contact-form input,
+.contact-form textarea {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: rgba(0, 255, 255, 0.04);
+  border: none;
+  border-left: 4px solid #00ffee;
+  border-radius: 12px;
+  color: #e0ffff;
+  font-family: 'Rajdhani', monospace;
+  font-size: 1.05rem;
+  outline: none;
+  transition: all 0.4s ease;
   box-shadow: 0 0 10px #00ffe011;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #00fff7;
-  box-shadow: 0 0 20px #00ffe088;
+  border-color: #00ffee;
+  box-shadow: 0 0 25px #00ffee88, 0 0 15px #00ffee33 inset;
+  background: rgba(0, 255, 255, 0.08);
 }
 
-.neon-button {
-  padding: 0.8rem 2rem;
-  background: #00ffee22;
-  color: #00fff7;
-  font-family: 'Orbitron', sans-serif;
-  border: 1px solid #00ffee55;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 0 12px #00ffd5aa;
+/* placeholder popup effect */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #77f7ff;
   transition: all 0.3s ease;
+  text-shadow: none;
 }
 
-.neon-button:hover {
-  background: #00fff7;
-  color: #000;
-  box-shadow: 0 0 30px #00ffd5dd, 0 0 50px #00fff088;
+.contact-form input:hover::placeholder,
+.contact-form textarea:hover::placeholder {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px #00f7ff;
 }
