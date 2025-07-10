@@ -9,21 +9,32 @@ const ResumeSection = () => {
       case "education":
   return (
     <div className="resume-panel futuristic-text">
-      <div className="edu-timeline">
-        <div className="edu-card neon-border" data-aos="fade-up">
-          <h3 className="neon-title">Vellore Institute of Technology</h3>
-          <p className="edu-date">2021–2025</p>
-          <p className="edu-degree">B.Tech in Computer Science and Engineering</p>
-          <p className="edu-score">CGPA: 7.68</p>
-        </div>
-        <div className="edu-card neon-border" data-aos="fade-up" data-aos-delay="100">
-          <h3 className="neon-title">Delhi Public School, Nagpur</h3>
-          <p className="edu-date">2020-2021</p>
-          <p className="edu-degree">Class XII</p>
-          <p className="edu-score">89%</p>
-        </div>
-      </div>
+  <div className="edu-timeline">
+    <div className="edu-card neon-border" data-aos="fade-up">
+      <h3 className="neon-title">Vellore Institute of Technology</h3>
+      <p className="edu-date">2021–2025</p>
+      <p className="edu-degree">B.Tech in Computer Science and Engineering</p>
+      <p className="edu-score">CGPA: 7.68</p>
+      <ul className="edu-details">
+        <li>📘 <strong>Key Courses:</strong> Data Structures, Web Development, OS, DBMS</li>
+        <li>🚀 <strong>Project:</strong> Brain Tumor Detection, Weather Forecating</li>
+        <li>🎓 <strong>Activities:</strong> Cultural Event, Hackathon</li>
+      </ul>
     </div>
+
+    <div className="edu-card neon-border" data-aos="fade-up" data-aos-delay="100">
+      <h3 className="neon-title">Delhi Public School, Nagpur</h3>
+      <p className="edu-date">2020–2021</p>
+      <p className="edu-degree">Class XII (CBSE)</p>
+      <p className="edu-score">89%</p>
+      <ul className="edu-details">
+        <li>🔬 <strong>Stream:</strong> PCM with Computer Science</li>
+        <li>📚 <strong>Activities:</strong> Science Exhibition, Sports</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
   );
 
       case "skills":

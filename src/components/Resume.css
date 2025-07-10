@@ -120,7 +120,6 @@
 .neon-title {
   font-size: 1.6rem;
   color: #e4f9ff;
-  text-shadow: 0 0 6px #00ffc2, 0 0 10px #00fff5;
   font-family: 'Orbitron', sans-serif;
   margin-bottom: 0.6rem;
 }
@@ -225,4 +224,18 @@
   position: absolute;
   left: -1.2rem;
   color: #00ffe0;
+}
+.edu-details {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #8ef9ff;
+  font-size: 0.9rem;
+  list-style: none;
+}
+
+.edu-details li::before {
+  content: "✦";
+  color: #0ff;
+  margin-right: 8px;
+  text-shadow: 0 0 5px #0ff;
 }
