@@ -8,6 +8,8 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiX } from "react-icons/si"; // Twitter X icon
 import resume from "./assets/Anjali_Mishra.pdf";
 import ResumeSection from "./components/Resume"; 
+import Projects from "./components/Project";
+import Contact from "./components/Contact";
 
 const App = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -195,24 +197,20 @@ const [showMore, setShowMore] = useState(false);
     {showMore ? "View Less" : "View More"}
   </button>
 </div>
-
 </div>
-
     </div>
- 
 </section>
 
 
       <ResumeSection />
-
-
+ <Projects />
+<Contact />
 
     </div>
   );
 };
 
 export default App;
-
 
 
 
