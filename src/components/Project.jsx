@@ -8,14 +8,14 @@ import brain from '../assets/brain.jpg';
 import code from '../assets/code.jpg';
 
 import { FaReact, FaBootstrap, FaMapMarkerAlt } from 'react-icons/fa';
-import { SiJavascript, SiHtml5, SiCss3, SiRedux, SiTypescript, SiPython, SiTensorflow, SiCodemirror } from 'react-icons/si';
+import { SiJavascript, SiHtml5, SiCss3, SiRedux, SiTypescript, SiPython, SiTensorflow, SiCodemirror} from 'react-icons/si';
 import { GiArtificialIntelligence } from 'react-icons/gi';
 const projects = [
   {
     title: "Weather App",
     image: Weather,
     description: "A sleek weather forecast app using OpenWeatherMap API, React hooks, and geolocation.",
-    skills: ["Python", "Machine Learing","API", "Geolocation"],
+    skills: ["Python", "MachineLearning","API", "Geolocation"],
     codeLink: "https://github.com/anjali2128/weather-forecasting/tree/main/code",
     liveLink: "https://weather-app-demo.netlify.app",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "E-Commerce",
     image: ecom,
     description: "A responsive e-commerce site for browsing and buying books online.",
-    skills: ["Html", "Css","Javascript"],
+    skills: ["HTML", "CSS","Javascript"],
     codeLink: "https://github.com/anjali2128/To-do-list",
     liveLink: "https://mellow-douhua-cd4a93.netlify.app/",
   },
@@ -47,7 +47,7 @@ const projects = [
     title: "Brain Tumor Detection",
     image: brain,
     description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
-    skills: ["Python", "Deep Learing"],
+    skills: ["Python", "DeepLearning"],
     codeLink: "https://github.com/anjali2128/To-do-list",
     liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
   },
@@ -75,7 +75,9 @@ const skillIcons = {
   MachineLearning: <SiTensorflow title="Machine Learning" color="#FF6F00" size={22} />,
   DeepLearning: <GiArtificialIntelligence title="Deep Learning" color="#6e44ff" size={22} />,
   CodeMirror: <SiCodemirror title="CodeMirror" color="#91a7ff" size={22} />,
+  Javascript: <SiJavascript title="JavaScript" color="#f7df1e" size={22} />, // ✅ newly added
 };
+
 
 
 const Projects = () => {
