@@ -1,8 +1,8 @@
 .contact-section {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background: radial-gradient(circle at top left, #000814, #010203, #000000);
   color: #00fff7;
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   font-family: 'Orbitron', sans-serif;
   z-index: 2;

@@ -6,6 +6,7 @@ import todo from'../assets/todo.jpg';
 import ecom from '../assets/ecom.jpg';
 import brain from '../assets/brain.jpg';
 import code from '../assets/code.jpg';
+import kar from '../assets/kara.png';
 
 import { FaReact, FaBootstrap, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiJavascript, SiHtml5, SiCss3, SiRedux, SiTypescript, SiPython, SiTensorflow, SiCodemirror} from 'react-icons/si';
@@ -17,7 +18,7 @@ const projects = [
     description: "A sleek weather forecast app using OpenWeatherMap API, React hooks, and geolocation.",
     skills: ["Python", "MachineLearning","API", "Geolocation"],
     codeLink: "https://github.com/anjali2128/weather-forecasting/tree/main/code",
-    liveLink: "https://weather-app-demo.netlify.app",
+    liveLink: "https://colab.research.google.com/drive/1yKhCn6BJot7HBeb7hWI_YtkPJ87alQ8K",
   },
   {
     title: "Todo List",
@@ -28,7 +29,7 @@ const projects = [
     liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
   },
   {
-    title: "E-Commerce",
+    title: "Book Selling",
     image: ecom,
     description: "A responsive e-commerce site for browsing and buying books online.",
     skills: ["HTML", "CSS","Javascript"],
@@ -46,18 +47,18 @@ const projects = [
   {
     title: "Brain Tumor Detection",
     image: brain,
-    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
+    description: "An AI-based system for automated brain tumor detection using deep learning techniques on MRI images.",
     skills: ["Python", "DeepLearning"],
-    codeLink: "https://github.com/anjali2128/To-do-list",
-    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
+    codeLink: "https://github.com/anjali2128/brain-tumor-detection-cnn",
+    liveLink: "https://colab.research.google.com/drive/1mGmfkxtUGPrODgf15tLCv8P7BCr8gIyY",
   },
   {
-    title: "E-Commerce",
-    image: ecom,
-    description: "A task management app with deadline tracking, priority filter, and dark mode toggle.",
-    skills: ["React", "Bootstrap"],
-    codeLink: "https://github.com/anjali2128/To-do-list",
-    liveLink: "https://scintillating-beignet-2ce890.netlify.app/",
+    title: "Karnataka Tourism",
+    image: kar,
+    description: "A responsive Bootstrap-based website showcasing Karnataka’s tourism highlights, with multilingual support, image galleries, and embedded maps.",
+    skills: ["HTML", "CSS", "Bootstrap", "Javascript"],
+    codeLink: "https://github.com/anjali2128/Karnataka-tourism",
+    liveLink: "https://unrivaled-cendol-3a9b43.netlify.app//",
   },
 ];
 const skillIcons = {
