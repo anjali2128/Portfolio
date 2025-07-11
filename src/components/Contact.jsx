@@ -9,10 +9,16 @@ const Contact = () => {
     const email = e.target.email.value.trim();
     const message = e.target.message.value.trim();
 
-    const whatsappMessage = `Hello! I'm ${name} (${email}).%0A%0A${message}`;
+    const mail = "anjmis2023@gmail.com";
+    const subject = `Contact from ${name}`;
 
-    const whatsappNumber = "917420891767"; 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, "_blank");
+    // Use actual line breaks in body
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+
+    // Encode entire body and subject
+    const mailtoLink = `mailto:${mail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.open(mailtoLink, "_blank");
   };
 
   return (
