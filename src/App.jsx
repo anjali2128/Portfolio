@@ -26,7 +26,43 @@ const App = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 const [showMore, setShowMore] = useState(false); 
-  
+
+
+  useEffect(() => {
+  const trailContainer = document.createElement("div");
+  trailContainer.style.position = "fixed";
+  trailContainer.style.top = 0;
+  trailContainer.style.left = 0;
+  trailContainer.style.width = "100%";
+  trailContainer.style.height = "100%";
+  trailContainer.style.pointerEvents = "none";
+  trailContainer.style.zIndex = "9999";
+  document.body.appendChild(trailContainer);
+
+  const createTrail = (x, y) => {
+    const dot = document.createElement("div");
+    dot.className = "cursor-trail";
+    dot.style.top = `${y}px`;
+    dot.style.left = `${x}px`;
+    trailContainer.appendChild(dot);
+
+    setTimeout(() => {
+      dot.remove();
+    }, 400); // how long each dot lives
+  };
+
+  const handleMove = (e) => {
+    createTrail(e.clientX, e.clientY);
+  };
+
+  document.addEventListener("mousemove", handleMove);
+
+  return () => {
+    document.removeEventListener("mousemove", handleMove);
+    trailContainer.remove();
+  };
+}, []);
+
 
   return (
     <div className="app ">
