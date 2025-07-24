@@ -112,7 +112,7 @@ const ResumeSection = () => {
           </ul>
         </div>
         <div className="exp-card neon-border" data-aos="fade-right">
-          <h3 className="neon-title">Sparrow Software Pvt. Ltd.</h3>
+          <h3 className="neon-title">Sparrow Softech Pvt. Ltd.</h3>
           <p className="exp-role">Front End Developer</p>
           <p className="exp-date">May 2025 – Present</p>
           <ul className="exp-details">
