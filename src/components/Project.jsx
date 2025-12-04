@@ -7,6 +7,11 @@ import ecom from '../assets/ecom.jpg';
 import brain from '../assets/brain.jpg';
 import code from '../assets/code.jpg';
 import kar from '../assets/kara.png';
+import movie from '../assets/movie.png';
+import image from '../assets/image.png';
+import expense from '../assets/expense.png';
+import { SiOpencv, SiMysql } from 'react-icons/si';
+
 
 import { FaReact, FaBootstrap, FaMapMarkerAlt } from 'react-icons/fa';
 import { SiJavascript, SiHtml5, SiCss3, SiRedux, SiTypescript, SiPython, SiTensorflow, SiCodemirror} from 'react-icons/si';
@@ -60,6 +65,30 @@ const projects = [
     codeLink: "https://github.com/anjali2128/Karnataka-tourism",
     liveLink: "https://unrivaled-cendol-3a9b43.netlify.app//",
   },
+  {
+    title: "Movie Recommended",
+    image: movie,
+    description: "AI-powered movie recommendation engine that analyzes user preferences, ratings, and genres to deliver personalized film suggestions with sleek filtering UI.",
+    skills: ["HTML", "CSS","Javascript", "Python", "SQL"],
+    codeLink: "https://github.com/anjali2128/Movie-Recommender",
+    liveLink: "https://movie-recommender-gjpx.onrender.com",
+  },
+  {
+    title: "Image Capture",
+    image: image,
+    description: "Real-time image capture and processing app with computer vision filters, face detection, and instant photo effects using OpenCV integration.",
+    skills: ["Python", "OpenCV"],
+    codeLink: "https://github.com/anjali2128/Image-Capture",
+    liveLink: "https://github.com/anjali2128/Image-Capture",
+  },
+  {
+    title: "Expense",
+    image: expense,
+    description: "A modern expense management dashboard for tracking, categorizing, and visualizing personal finances with real-time charts and smart insights.",
+    skills: ["HTML", "CSS","Javascript", "Python"],
+    codeLink: "https://github.com/anjali2128/Expense",
+    liveLink: "https://anjali2128.github.io/Expense/",
+  },
 ];
 const skillIcons = {
   React: <FaReact title="React" color="#61DBFB" size={22} />,
@@ -76,7 +105,9 @@ const skillIcons = {
   MachineLearning: <SiTensorflow title="Machine Learning" color="#FF6F00" size={22} />,
   DeepLearning: <GiArtificialIntelligence title="Deep Learning" color="#6e44ff" size={22} />,
   CodeMirror: <SiCodemirror title="CodeMirror" color="#91a7ff" size={22} />,
-  Javascript: <SiJavascript title="JavaScript" color="#f7df1e" size={22} />, // ✅ newly added
+  Javascript: <SiJavascript title="JavaScript" color="#f7df1e" size={22} />, 
+  OpenCV: <SiOpencv title="OpenCV" color="#ff4444" size={22} />,
+  SQL: <SiMysql title="SQL" color="#006699" size={22} />,
 };
 
 

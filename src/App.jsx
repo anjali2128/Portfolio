@@ -124,12 +124,12 @@ const [showMore, setShowMore] = useState(false);
                 Hi, I'm Anjali Mishra
               </h1>
               <div className="typewriter-stack mt-4">
-                <span className="outlined-text">Frontend Developer</span>
-                <span className="typing-text">Frontend Developer</span>
+                <span className="outlined-text">Full Stack Developer</span>
+                <span className="typing-text">Full Stack Developer</span>
               </div>
               <p className="lead fs-5 mt-3 typing-paragraph">
-                Web Developer & Data Analyst passionate about crafting unique
-                digital experiences and transforming data into insights.
+                Full Stack Developer crafting responsive web applications, integrating modern 
+                APIs, and building scalable solutions from frontend React UIs to Python backends.
               </p>
               <a
                 href={resume}
@@ -156,7 +156,8 @@ const [showMore, setShowMore] = useState(false);
                 >
                   <FaGithub />
                 </a>
-                <a
+                
+                {/*<a
                   href="https://www.instagram.com/anjalliii_.4/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -169,7 +170,7 @@ const [showMore, setShowMore] = useState(false);
                   rel="noopener noreferrer"
                 >
                   <SiX />
-                </a>
+                </a>*/}
               </div>
             </div>
             <div className="col-md-6 text-center order-1 order-md-2" data-aos="fade-left"> 
@@ -201,22 +202,19 @@ const [showMore, setShowMore] = useState(false);
     <div className="about-text-container" data-aos="fade-left">
       <h2 className="about-title">About Me</h2>
 
-      {/* Always visible first para */}
+      {/* Always visible first para - concise version */}
       <p>
-        I'm <span className="highlight">Anjali Mishra</span>, a passionate and detail-oriented Front-End Developer with a strong foundation in HTML, CSS, JavaScript, React, and Bootstrap. I recently graduated with a B.Tech in Computer Science and Engineering from <span className="highlight">Vellore Institute of Technology</span>, where I explored the power of technology through impactful projects in web development, machine learning, and data visualization.
+        I'm <span className="highlight">Anjali Mishra</span>, a B.Tech graduate in Computer Science from <span className="highlight">VIT Vellore</span>. Experienced in front-end at <span className="highlight">Sparrow Softech Pvt. Ltd.</span>  development using React.js, JavaScript, HTML5, and CSS3, with internships at <span className="highlight">National Informatics Center</span>, and roles focusing on responsive UI and efficient web applications.
       </p>
 
-      {/* Extra content visible only when showMore is true */}
+      {/* Extra content visible only when showMore is true - concise version */}
       {showMore && (
         <div className="about-extra-content">
           <p>
-            During my internship at the <span className="highlight">National Informatics Center</span>, I contributed to streamlining onboarding processes and resolving real-time merchant issues, which honed my problem-solving and client communication skills.
+            I have contributed to projects ranging from e-commerce websites to AI-based applications. Skilled in React.js, Django, Python, and data analytics tools, I improve user experience and optimize performance.
           </p>
           <p>
-            I thrive on creating visually appealing, responsive, and user-focused web interfaces. My work blends creative design with clean code, driven by a belief that great user experience starts with intuitive front-end design.
-          </p>
-          <p>
-            In addition to coding, I’m passionate about data analytics, design tools like Figma, and continuously learning to expand my development toolkit. Outside of tech, you'll find me immersed in music, painting, and exploring new places.
+            My experience includes internships at National Informatics Center and freelance front-end roles, where I enhanced operational workflows and user satisfaction.
           </p>
           <p className="quote">
             “Let’s build something amazing together!”
@@ -226,16 +224,18 @@ const [showMore, setShowMore] = useState(false);
 
       {/* Button always below the paragraph(s) */}
       <div className="read-more-button-wrap">
-  <button
-    className={`fancy-toggle-btn ${showMore ? "open" : ""}`}
-    onClick={() => setShowMore(!showMore)}
-  >
-    {showMore ? "View Less" : "View More"}
-  </button>
-</div>
-</div>
+        <button
+          className={`fancy-toggle-btn ${showMore ? "open" : ""}`}
+          onClick={() => setShowMore(!showMore)}
+        >
+          {showMore ? "View Less" : "View More"}
+        </button>
+      </div>
     </div>
+  </div>
 </section>
+
+
 
 
       <ResumeSection />

@@ -1,93 +1,411 @@
+/* Projects Section - Futuristic Dark Theme */
 .project-section {
-  background: radial-gradient(ellipse at center, #000814 0%, #000000 100%);
-  padding: 6rem 2rem;
-  color: #00f7ff;
+  background: linear-gradient(17deg, rgb(8, 11, 21) 68.07%, #0f0c29 94.12%, #302b63 100%, #24243e);
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
+  padding: 80px 0 !important;
 }
 
+/* Animated background orbs */
+.project-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15), transparent);
+  border-radius: 50%;
+  top: -200px;
+  left: -200px;
+  animation: float-orb 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.project-section::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.15), transparent);
+  border-radius: 50%;
+  bottom: -150px;
+  right: -150px;
+  animation: float-orb 15s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(50px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+}
+
+/* Section Title with Glitch Effect */
 .project-title {
   font-size: 3rem;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(90deg, #00f0ff, #3a7bd5, #00f0ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin-bottom: 3rem;
-  text-shadow:
-    0 0 5px #00f7ff88,
-    0 0 10px #00f7ff55,
-    0 0 20px #00f7ff22;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  text-shadow: 
+    0 0 10px rgba(99, 102, 241, 0.8),
+    0 0 20px rgba(139, 92, 246, 0.6),
+    0 0 30px rgba(236, 72, 153, 0.4);
+  animation: title-pulse 3s ease-in-out infinite;
+  /* Center the title */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+/* OR, if you want to center it within a container: */
+.project-title-container {
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes title-pulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(99, 102, 241, 0.8),
+      0 0 20px rgba(139, 92, 246, 0.6),
+      0 0 30px rgba(236, 72, 153, 0.4);
+  }
+  50% {
+    text-shadow: 
+      0 0 20px rgba(99, 102, 241, 1),
+      0 0 40px rgba(139, 92, 246, 0.8),
+      0 0 60px rgba(236, 72, 153, 0.6);
+  }
+}
+
+.project-title::after {
+  content: '🚀 Projects';
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-shadow: 2px 0 #00ffff;
+  animation: glitch-2 3s infinite linear alternate-reverse;
+  opacity: 0.8;
+}
+
+@keyframes glitch-1 {
+  0% { clip-path: inset(40% 0 61% 0); }
+  20% { clip-path: inset(92% 0 1% 0); }
+  40% { clip-path: inset(43% 0 1% 0); }
+  60% { clip-path: inset(25% 0 58% 0); }
+  80% { clip-path: inset(54% 0 7% 0); }
+  100% { clip-path: inset(58% 0 43% 0); }
+}
+
+@keyframes glitch-2 {
+  0% { clip-path: inset(21% 0 50% 0); }
+  20% { clip-path: inset(6% 0 60% 0); }
+  40% { clip-path: inset(75% 0 20% 0); }
+  60% { clip-path: inset(30% 0 40% 0); }
+  80% { clip-path: inset(90% 0 5% 0); }
+  100% { clip-path: inset(10% 0 85% 0); }
+}
+
+/* Project Card Styling */
 .project-card {
-  width: 330px;
-  background: rgba(9, 48, 48, 0.454);
-  backdrop-filter: blur(8px);
-  border-radius: 16px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 380px;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+/* Holographic border effect */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #3b82f6, #6366f1);
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: gradient-rotate 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes gradient-rotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 247, 255, 0.2);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(99, 102, 241, 0.4),
+    0 0 40px rgba(139, 92, 246, 0.3),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.5) !important;
 }
 
+/* Image hover effect with scan lines */
 .project-img-top {
-  height: 180px;
+  height: 220px;
   object-fit: cover;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+  transition: all 0.5s ease;
+  position: relative;
 }
 
+.project-card:hover .project-img-top {
+  transform: scale(1.1);
+  filter: brightness(0.7) contrast(1.2);
+}
+
+.project-img-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(99, 102, 241, 0.1) 2px,
+    rgba(99, 102, 241, 0.1) 4px
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-img-top::after {
+  opacity: 1;
+}
+
+/* Card Body */
+.project-card .card-body {
+  background: rgba(3, 23, 34, 0.6) !important;
+  padding: 1.5rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Title with Neon Effect */
 .neon-project-title {
-  font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
-  color: #00eaff;
-  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+@keyframes text-shimmer {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+.neon-project-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.8);
+}
+
+.project-card:hover .neon-project-title::after {
+  width: 100%;
+}
+
+/* Description Text */
+.project-card .text-light {
+  color: #cbd5e1 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-.skill-badge {
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  color: #00f7ff;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  padding: 0.4rem 0.7rem;
-  font-size: 0.75rem;
-  border-radius: 8px;
-  box-shadow: 0 0 6px #00f7ff33;
+/* Skills Section */
+.project-skills {
+  margin-top: 1rem;
 }
 
-.project-buttons .btn {
-  font-family: 'Orbitron', sans-serif;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #00f7ff;
-  border: 1px solid #00f7ff66;
-  background: transparent;
-  transition: 0.3s ease-in-out;
+.project-icons {
+  gap: 0.5rem;
 }
 
-.project-buttons .btn:hover {
-  background: #00f7ff22;
-  box-shadow: 0 0 15px #00f7ffaa;
-  color: #fff;
-}
 .icon-skill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 8px;
-  box-shadow: 0 0 8px #00f7ff22;
-  transition: transform 0.3s ease;
+  padding: 8px 12px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .icon-skill:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 15px #00f7ffaa;
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Buttons with Cyberpunk Style */
+.project-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.project-buttons .btn {
+  flex: 1;
+  padding: 10px 20px !important;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px !important;
+  border: 2px solid !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.project-buttons .btn-outline-info {
+  color: #ecb2ec !important;
+  border-color: rgb(106, 169, 191) !important;
+  background: transparent !important;
+}
+
+.project-buttons .btn-outline-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-buttons .btn-outline-info:hover::before {
+  left: 100%;
+}
+
+.project-buttons .btn-outline-info:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: #60a5fa !important;
+  color: #60a5fa !important;
+  box-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.5),
+    inset 0 0 20px rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
+}
+
+.project-buttons .btn:active {
+  transform: translateY(0);
+}
+
+/* Floating animation for cards on load */
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: float-in 0.6s ease-out backwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+.project-card:nth-child(7) { animation-delay: 0.7s; }
+.project-card:nth-child(8) { animation-delay: 0.8s; }
+.project-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .project-section {
+    padding: 60px 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .neon-project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .project-buttons .btn {
+    width: 100%;
+  }
 }

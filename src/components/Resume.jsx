@@ -38,65 +38,99 @@ const ResumeSection = () => {
   );
 
       case "skills":
-        return (
-          <div className="resume-panel futuristic-text">
-            <div className="skills-category">
-              <h4 className="skill-section-title">Programming</h4>
-              <div className="skills-matrix">
-                <div className="glow-chip">Python</div>
-                <div className="glow-chip">JavaScript</div>
-                <div className="glow-chip">React</div>
-                <div className="glow-chip">HTML</div>
-                <div className="glow-chip">CSS</div>
-                <div className="glow-chip">Bootstrap</div>
-              </div>
-            </div>
-
-            <div className="skills-category">
-              <h4 className="skill-section-title">Data Tools</h4>
-              <div className="skills-matrix">
-                <div className="glow-chip">Power BI</div>
-                <div className="glow-chip">Tableau</div>
-                <div className="glow-chip">SQL</div>
-                <div className="glow-chip">Excel</div>
-              </div>
-            </div>
-
-            <div className="skills-category">
-              <h4 className="skill-section-title">Design</h4>
-              <div className="skills-matrix">
-                <div className="glow-chip">Figma</div>
-                <div className="glow-chip">Photoshop</div>
-                <div className="glow-chip">WordPress</div>
-              </div>
-            </div>
-
-            <div className="skills-category">
-              <h4 className="skill-section-title">Concepts</h4>
-              <div className="skills-matrix">
-                <div className="glow-chip">Machine Learning</div>
-                <div className="glow-chip">Data Visualization</div>
-                <div className="glow-chip">Predictive Analytics</div>
-                <div className="glow-chip">Data Cleaning</div>
-              </div>
-            </div>
-            <div className="skills-category">
-        <h4 className="skill-section-title">Soft Skills</h4>
+  return (
+    <div className="resume-panel futuristic-text">
+      <div className="skills-category">
+        <h4 className="skill-section-title">Programming Languages</h4>
         <div className="skills-matrix">
-          <div className="glow-chip">Teamwork</div>
-          <div className="glow-chip">Communication</div>
-          <div className="glow-chip">Critical Thinking</div>
-          <div className="glow-chip">Time Management</div>
-          <div className="glow-chip">Problem Solving</div>
-          <div className="glow-chip">Multitasking</div>
-          <div className="glow-chip">Work Ethic</div>
-          <div className="glow-chip">Emotional Intelligence</div>
-          <div className="glow-chip">Pressure Management</div>
-          <div className="glow-chip">Deadline-driven</div>
+          <div className="glow-chip">Python</div>
+          <div className="glow-chip">JavaScript</div>
+          <div className="glow-chip">HTML5</div>
+          <div className="glow-chip">CSS3</div>
         </div>
       </div>
-          </div>
-        );
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">Frameworks & Libraries</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">React.js</div>
+          <div className="glow-chip">Node.js</div>
+          <div className="glow-chip">Angular</div>
+          <div className="glow-chip">Django</div>
+          <div className="glow-chip">Bootstrap</div>
+        </div>
+      </div>
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">Databases & Tools</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">MySQL</div>
+          <div className="glow-chip">SQL</div>
+          <div className="glow-chip">Firebase</div>
+          <div className="glow-chip">Power BI</div>
+          <div className="glow-chip">Tableau</div>
+        </div>
+      </div>
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">Development Tools</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">Git/GitHub</div>
+          <div className="glow-chip">Postman</div>
+          <div className="glow-chip">Netlify</div>
+          <div className="glow-chip">VS Code</div>
+          <div className="glow-chip">Jupyter Notebook</div>
+        </div>
+      </div>
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">Design & UI/UX</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">Figma</div>
+          <div className="glow-chip">Photoshop</div>
+          <div className="glow-chip">WordPress</div>
+          <div className="glow-chip">Canva</div>
+        </div>
+      </div>
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">AI/ML Concepts</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">Machine Learning</div>
+          <div className="glow-chip">Deep Learning</div>
+          <div className="glow-chip">CNN</div>
+          <div className="glow-chip">OpenCV</div>
+          <div className="glow-chip">Data Visualization</div>
+        </div>
+      </div>
+
+      <div className="skills-category">
+        <h4 className="skill-section-title">Core Concepts</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">REST APIs</div>
+          <div className="glow-chip">CRUD Operations</div>
+          <div className="glow-chip">OOP</div>
+          <div className="glow-chip">DSA</div>
+          <div className="glow-chip">Responsive Design</div>
+        </div>
+      </div>
+      {/* Soft Skills */}
+      <div className="skills-category">
+        <h4 className="skill-section-title">Soft Skills</h4>
+        <div className="skills-matrix">
+          <div className="glow-chip">Communication</div>
+          <div className="glow-chip">Teamwork</div>
+          <div className="glow-chip">Problem Solving</div>
+          <div className="glow-chip">Adaptability</div>
+          <div className="glow-chip">Attention to Detail</div>
+          <div className="glow-chip">Creative Thinking</div>
+          <div className="glow-chip">Time Management</div>
+          <div className="glow-chip">Ownership Mindset</div>
+        </div>
+      </div>
+    </div>
+  );
+
       case "experience":
   return (
     <div className="resume-panel futuristic-text">
