@@ -148,11 +148,22 @@ const ResumeSection = () => {
         <div className="exp-card neon-border" data-aos="fade-right">
           <h3 className="neon-title">Sparrow Softech Pvt. Ltd.</h3>
           <p className="exp-role">Front End Developer</p>
-          <p className="exp-date">May 2025 – Present</p>
+          <p className="exp-date">May 2025 – Nov 2025</p>
           <ul className="exp-details">
             <li>Developed futuristic UIs in React + Bootstrap</li>
             <li>Enhanced user experience with animations & scroll logic</li>
             <li>Integrated APIs for real-time dashboard updates</li>
+          </ul>
+        </div>
+         <div className="exp-card neon-border" data-aos="fade-left">
+          <h3 className="neon-title">Microlink Solutions Pvt. Ltd.</h3>
+          <p className="exp-role">Full Stack Developer</p>
+          <p className="exp-date">Dec 2025 – Present</p>
+          <ul className="exp-details">
+            <li>Developed full-stack applications using React.js and Node.js</li>
+            <li>Designed and maintained relational databases</li>
+            <li>Implemented REST APIs and integrated third-party services</li>
+            <li>Optimized web apps for performance and scalability</li>
           </ul>
         </div>
       </div>
